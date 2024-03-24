@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <assignments>
+        <name>Assignment_GetRecordsCount</name>
+        <label>Assignment GetRecordsCount</label>
+        <locationX>182</locationX>
+        <locationY>350</locationY>
+        <assignmentItems>
+            <assignToReference>GetRecordsCount</assignToReference>
+            <operator>AssignCount</operator>
+            <value>
+                <elementReference>Get_Opportunity_Products</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Decision_Delete_All_Products</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Decision_Delete_All_Products</name>
+        <label>Decision Delete All Products</label>
+        <locationX>182</locationX>
+        <locationY>458</locationY>
+        <defaultConnector>
+            <targetReference>No_Products_to_Delete</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Delete_All</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>GetRecordsCount</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Delete_Records</targetReference>
+            </connector>
+            <label>Delete All</label>
+        </rules>
+    </decisions>
+    <description>Deletes all Opportunity Products related to the Opportunity.</description>
+    <environments>Default</environments>
+    <interviewLabel>Delete All Products {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Delete All Opportunity Products</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordDeletes>
+        <name>Delete_Records</name>
+        <label>Delete Records</label>
+        <locationX>50</locationX>
+        <locationY>566</locationY>
+        <connector>
+            <targetReference>Delete_All_Products_Final_Screen</targetReference>
+        </connector>
+        <inputReference>Get_Opportunity_Products</inputReference>
+    </recordDeletes>
+    <recordLookups>
+        <name>Get_Opportunity_Products</name>
+        <label>Get Opportunity Products</label>
+        <locationX>182</locationX>
+        <locationY>242</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Assignment_GetRecordsCount</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>OpportunityId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>OpportunityLineItem</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <screens>
+        <name>Delete_All_Products</name>
+        <label>Delete All Products</label>
+        <locationX>182</locationX>
+        <locationY>134</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Get_Opportunity_Products</targetReference>
+        </connector>
+        <fields>
+            <name>Confirmation_Prompt</name>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;Are you sure you want to delete all the opportunity products?&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Delete_All_Products_Final_Screen</name>
+        <label>Delete All Products Final Screen</label>
+        <locationX>50</locationX>
+        <locationY>674</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>All_Deleted</name>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;All opportunity products have been deleted.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>No_Products_to_Delete</name>
+        <label>No Products to Delete</label>
+        <locationX>314</locationX>
+        <locationY>566</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>No_Products_to_Delete_Text</name>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;There are no opportunity products to delete.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Delete_All_Products</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>Current_Opportunity</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Opportunity</objectType>
+    </variables>
+    <variables>
+        <name>GetRecordsCount</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+    </variables>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

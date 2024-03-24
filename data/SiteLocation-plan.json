@@ -1,0 +1,11 @@
+[
+  {
+    "sobject": "SiteLocation__c",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "SiteLocation1.json",
+      "SiteLocation2.json"
+    ]
+  }
+]

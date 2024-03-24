@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Deletes all opportunity products related to the opportunity.</description>
+    <flowDefinition>Delete_All_Opportunity_Products</flowDefinition>
+    <label>Delete All Products</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>
