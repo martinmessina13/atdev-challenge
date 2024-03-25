@@ -23,12 +23,13 @@
 1. Assign the **Access_All_Record_Types** permission set to the default user:
 
     ```
-    sf org assign permset -n Access_All_Record_Types
+    sf org assign permset -n Access_All_Record_Types --target-org atdev-challenge
     ```
 
 1. Create sample data (don't forget to add your credentials in scripts/js/locations_sfdc_creator.js where indicated):
 
     ```
+    npm install jsforce
     npm start
     ```
 
@@ -41,9 +42,9 @@
 1. Open the scratch org:
 
     ```
-    sf org open
+    sf org open --target-org atdev-challenge
     ```
 
-1. [Set the Page Assigment of the Opportunity Product Site Location Layout](https://help.salesforce.com/s/articleView?id=sf.layouts_assigning.htm&type=5):
+1. [Set the Page Assigment of the Opportunity Product Site Location Layout](https://help.salesforce.com/s/articleView?id=sf.layouts_assigning.htm&type=5) of the Opportunity Product object to the System Administrator.:
 
 In App Launcher, click View All then select the Sales app. After that click on the Opportunity Tab, and start from there.
