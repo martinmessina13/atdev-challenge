@@ -17,7 +17,7 @@
 1. Install the app from the unmanaged package:
 
     ```
-    sf package install --package "04tbm0000000Atp" --target-org atdev-challenge
+    sf package install --package "04tbm0000000AvR" --target-org atdev-challenge
     ```
 
 1. Assign the **Access_All_Record_Types** permission set to the default user:
