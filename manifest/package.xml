@@ -13,6 +13,11 @@
 		<name>Flow</name>
 	</types>
 	<types>
+		<members>Opportunity-Opportunity Site Location Layout</members>
+		<members>OpportunityLineItem-Opportunity Product Site Location Layout</members>
+		<name>Layout</name>
+	</types>
+	<types>
 		<members>Access_All_Record_Types</members>
 		<name>PermissionSet</name>
 	</types>
