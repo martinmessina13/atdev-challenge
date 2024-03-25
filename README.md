@@ -45,6 +45,6 @@
     sf org open --target-org atdev-challenge
     ```
 
-1. [Set the Page Assigment of the Opportunity Product Site Location Layout](https://help.salesforce.com/s/articleView?id=sf.layouts_assigning.htm&type=5) of the Opportunity Product object to the System Administrator.:
+1. [Set the Page Assigment](https://help.salesforce.com/s/articleView?id=sf.layouts_assigning.htm&type=5) of the Opportunity Product Site Location Layout and the Opportunity Site Location Layout for the Opportunity Product and the Opportunity object, respectively, to the System Administrator.:
 
 In App Launcher, click View All then select the Sales app. After that click on the Opportunity Tab, and start from there.
