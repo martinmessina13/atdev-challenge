@@ -9,6 +9,7 @@ const conn = new jsforce.Connection();
 // Set object name as a constant
 const OBJECT_NAME = 'SiteLocation__c';
 
+// Login with to your Salesforce organizaiton with your credentials and security token
 conn.login('username', 'password+token', (error, result) => {
     if(error){
         return console.error(error);
