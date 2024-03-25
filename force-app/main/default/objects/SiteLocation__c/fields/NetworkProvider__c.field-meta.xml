@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NetworkProvider__c</fullName>
+    <externalId>false</externalId>
+    <label>Network Provider</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Colt</fullName>
+                <default>true</default>
+                <label>Colt</label>
+            </value>
+            <value>
+                <fullName>PacketFabric</fullName>
+                <default>false</default>
+                <label>PacketFabric</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

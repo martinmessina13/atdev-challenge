@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
-		<members>Opportunity-Opportunity Layout</members>
-		<members>OpportunityLineItem-Opportunity Product Layout</members>
-		<name>Layout</name>
+		<members>OpportunityLineItem.SiteLocation__c</members>
+		<name>CustomField</name>
+	</types>
+	<types>
+		<members>SiteLocation__c</members>
+		<name>CustomObject</name>
+	</types>
+	<types>
+		<members>Delete_All_Opportunity_Products</members>
+		<name>Flow</name>
+	</types>
+	<types>
+		<members>Access_All_Record_Types</members>
+		<name>PermissionSet</name>
+	</types>
+	<types>
+		<members>Opportunity.Delete_All_Products</members>
+		<name>QuickAction</name>
 	</types>
 	<version>58.0</version>
 </Package>

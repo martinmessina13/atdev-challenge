@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vendor__c</fullName>
+    <externalId>false</externalId>
+    <label>Vendor</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Aligned Energy</fullName>
+                <default>true</default>
+                <label>Aligned Energy</label>
+            </value>
+            <value>
+                <fullName>ColoCSX</fullName>
+                <default>false</default>
+                <label>ColoCSX</label>
+            </value>
+            <value>
+                <fullName>Cologix</fullName>
+                <default>false</default>
+                <label>Cologix</label>
+            </value>
+            <value>
+                <fullName>Colt</fullName>
+                <default>false</default>
+                <label>Colt</label>
+            </value>
+            <value>
+                <fullName>Coresite</fullName>
+                <default>false</default>
+                <label>Coresite</label>
+            </value>
+            <value>
+                <fullName>Culver Connect 1</fullName>
+                <default>false</default>
+                <label>Culver Connect 1</label>
+            </value>
+            <value>
+                <fullName>CyrusOne</fullName>
+                <default>false</default>
+                <label>CyrusOne</label>
+            </value>
+            <value>
+                <fullName>Databank</fullName>
+                <default>false</default>
+                <label>Databank</label>
+            </value>
+            <value>
+                <fullName>Data Foundry</fullName>
+                <default>false</default>
+                <label>Data Foundry</label>
+            </value>
+            <value>
+                <fullName>Digital Realty</fullName>
+                <default>false</default>
+                <label>Digital Realty</label>
+            </value>
+            <value>
+                <fullName>Dupont Fabros</fullName>
+                <default>false</default>
+                <label>Dupont Fabros</label>
+            </value>
+            <value>
+                <fullName>EdgeConneX</fullName>
+                <default>false</default>
+                <label>EdgeConneX</label>
+            </value>
+            <value>
+                <fullName>Equinix</fullName>
+                <default>false</default>
+                <label>Equinix</label>
+            </value>
+            <value>
+                <fullName>Fiberhub</fullName>
+                <default>false</default>
+                <label>Fiberhub</label>
+            </value>
+            <value>
+                <fullName>Flexential</fullName>
+                <default>false</default>
+                <label>Flexential</label>
+            </value>
+            <value>
+                <fullName>Global Switch</fullName>
+                <default>false</default>
+                <label>Global Switch</label>
+            </value>
+            <value>
+                <fullName>I/O</fullName>
+                <default>false</default>
+                <label>I/O</label>
+            </value>
+            <value>
+                <fullName>iM Interconnect</fullName>
+                <default>false</default>
+                <label>iM Interconnect</label>
+            </value>
+            <value>
+                <fullName>Interxion</fullName>
+                <default>false</default>
+                <label>Interxion</label>
+            </value>
+            <value>
+                <fullName>Iron Mountain</fullName>
+                <default>false</default>
+                <label>Iron Mountain</label>
+            </value>
+            <value>
+                <fullName>JAXNAP</fullName>
+                <default>false</default>
+                <label>JAXNAP</label>
+            </value>
+            <value>
+                <fullName>JTC</fullName>
+                <default>false</default>
+                <label>JTC</label>
+            </value>
+            <value>
+                <fullName>LA Times</fullName>
+                <default>false</default>
+                <label>LA Times</label>
+            </value>
+            <value>
+                <fullName>Lightbound</fullName>
+                <default>false</default>
+                <label>Lightbound</label>
+            </value>
+            <value>
+                <fullName>Markley</fullName>
+                <default>false</default>
+                <label>Markley</label>
+            </value>
+            <value>
+                <fullName>NantWorks</fullName>
+                <default>false</default>
+                <label>NantWorks</label>
+            </value>
+            <value>
+                <fullName>Netrality</fullName>
+                <default>false</default>
+                <label>Netrality</label>
+            </value>
+            <value>
+                <fullName>OpenColo</fullName>
+                <default>false</default>
+                <label>OpenColo</label>
+            </value>
+            <value>
+                <fullName>Phoenix NAP</fullName>
+                <default>false</default>
+                <label>Phoenix NAP</label>
+            </value>
+            <value>
+                <fullName>Portland NAP</fullName>
+                <default>false</default>
+                <label>Portland NAP</label>
+            </value>
+            <value>
+                <fullName>QTS</fullName>
+                <default>false</default>
+                <label>QTS</label>
+            </value>
+            <value>
+                <fullName>RagingWire/NTT</fullName>
+                <default>false</default>
+                <label>RagingWire/NTT</label>
+            </value>
+            <value>
+                <fullName>Roche</fullName>
+                <default>false</default>
+                <label>Roche</label>
+            </value>
+            <value>
+                <fullName>Sabey Intergate</fullName>
+                <default>false</default>
+                <label>Sabey Intergate</label>
+            </value>
+            <value>
+                <fullName>Server Farm Realty</fullName>
+                <default>false</default>
+                <label>Server Farm Realty</label>
+            </value>
+            <value>
+                <fullName>Switch</fullName>
+                <default>false</default>
+                <label>Switch</label>
+            </value>
+            <value>
+                <fullName>Telehouse</fullName>
+                <default>false</default>
+                <label>Telehouse</label>
+            </value>
+            <value>
+                <fullName>Tishman</fullName>
+                <default>false</default>
+                <label>Tishman</label>
+            </value>
+            <value>
+                <fullName>Webair</fullName>
+                <default>false</default>
+                <label>Webair</label>
+            </value>
+            <value>
+                <fullName>Westin Exchange</fullName>
+                <default>false</default>
+                <label>Westin Exchange</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

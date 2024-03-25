@@ -9,16 +9,15 @@ const conn = new jsforce.Connection();
 // Set object name as a constant
 const OBJECT_NAME = 'SiteLocation__c';
 
-conn.login('martin.messina@atdev.dev.ed', 'Himym123456BDOPpbAFB0tZkdl8jkok8iPo3', (error, result) => {
+conn.login('username', 'password+token', (error, result) => {
     if(error){
         return console.error(error);
     }
-    console.log(result);
+    // Query the RecordType object
     conn.query('SELECT ID, Name, DeveloperName, SobjectType FROM RecordType', (error, result) => {
         if(error){
             return console.error(error);
         }
-        console.log(`query result: ${JSON.stringify(result, null, 2)}`);
         const recordTypes = result.records;
         createSiteLocationData(recordTypes);
     })

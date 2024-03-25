@@ -1,38 +1,32 @@
 
 ## How to install
 
-1. If you haven't already done so, authorize your hub org and provide it with an alias (**myhuborg** in the command below):
-
-    ```
-    sf org login web -d -a myhuborg
-    ```
-
 1. Clone the atdev-challenge repository:
 
     ```
     git clone https://github.com/martinmessina13/atdev-challenge
-    cd lwc-recipes
+    cd atdev-challenge
     ```
 
-1. Create a scratch org and provide it with an alias (**lwc-recipes** in the command below):
+1. Authorize your Trailhead Playground or Developer Edition organization and provide it with an alias (atdev-challenge-org in the command below):
 
     ```
-    sf org create scratch -d -f config/project-scratch-def.json -a lwc-recipes
+    sf org login web -d -a atdev-challenge
     ```
 
-1. Push the app to your scratch org. Alternatively install it from an unmanaged package clicking here:
+1. Install the app from the unmanaged package:
 
     ```
-    sf project deploy start
+    sf package install --package "04tbm0000000AsD" --target-org atdev-challenge
     ```
 
-1. Assign the **recipes** permission set to the default user:
+1. Assign the **Access_All_Record_Types** permission set to the default user:
 
     ```
-    sf org assign permset -n recipes
+    sf org assign permset -n Access_All_Record_Types
     ```
 
-1. Run node.js script to create sample data (don't forget to add your credentials in scripts/js/locations_sfdc_creator.js where indicated):
+1. Create sample data (don't forget to add your credentials in scripts/js/locations_sfdc_creator.js where indicated):
 
     ```
     npm start
@@ -49,5 +43,7 @@
     ```
     sf org open
     ```
+
+1. [Set the Page Assigment of the Opportunity Product Site Location Layout](https://help.salesforce.com/s/articleView?id=sf.layouts_assigning.htm&type=5):
 
 In App Launcher, click View All then select the Sales app. After that click on the Opportunity Tab, and start from there.
